@@ -1,12 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="styles/reset.css" type="text/css" />
+  <link rel="stylesheet" href="styles/style.css" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/index.js"></script>
 </head>
 <body>
-    <h1>test</h1>
+  <div class="side-nav" id="cat-side-nav">
+      <a class="side-nav-link" href="#home">Home</a>
+      <a class="side-nav-link" href="#spanish-info">Informacion en espanol</a>
+      <a class="side-nav-link" href="#Servicios-clinicos">Servicios Clinicos</a>
+      <a class="side-nav-link" href="#Clinical-Services">Clinical services</a>
+      <a class="side-nav-link" href="#about">About Us</a>
+      <a class="side-nav-link" href="#translation">Translations</a>
+      <div class="comitted" id="comitted">
+        <div id="home-side" class="" value="#home">
+          <div>
+            <h3>Main Office</h3>
+            <h4>License No 1624-01</h4>
+            <h4>DRS No AC 14</h4>  
+          </div>
+          <div>
+            <h3>Peoria Office</h3>
+            <h4>License No 1624-02</h4>
+            <h4>DRS No AD 14</h4>
+          </div>
+          <div>
+            <h3>Dayton Office</h3>
+            <h4>License No 1624-03</h4>
+            <h4>DRS No AG 54</h4>  
+          </div>
+        </div>
+        
+        <div id="spanish-info-side" class="hidden" value="#spanish-info">
+          <div>
+            <h3>Officina de Morrison</h3>
+            <h4>Licencia No 1624-01</h4>
+            <h4>DRS No AC 14</h4>  
+          </div>
+          <div>
+            <h3>Oficina de Peoria</h3>
+            <h4>Licencia No 1624-02</h4>
+            <h4>DRS No AD 14</h4>
+          </div>
+          <div>
+            <h3>Oficina de Dayton</h3>
+            <h4>Licencia No 1624-03</h4>
+            <h4>DRS No AG 54</h4>  
+          </div>
+        </div>
+        
+        <div id="spanish-clinic-side" class="hidden" value="#Servicios-clinicos">
+          <p class="">Lista De Precios:</p>
+            <ul class="side-list-specific">
+              <li>Inscripción  Adultos<ul class="side-list-specific"><li>$35</li></ul></li>
+              <li>Inscripción Jóvenes<ul class="side-list-specific"><li>$20</li></ul></li>
+              <li>Nivel I de Educación<ul class="side-list-specific"><li>$100</li></ul></li>
+              <li>Libro de Nivel II<ul class="side-list-specific"><li>$18</li></ul></li>
+              <li>Grupo de Adultos<ul class="side-list-specific"><li>$25</li></ul></li>
+              <li>Grupo de Joven<ul class="side-list-specific"><li>$15</li></ul></li>
+              <li>Evaluación Alcohol y Drogas<ul class="side-list-specific"><li>$150</li></ul></li>
+              <li>Valoración de Salud Mental<ul class="side-list-specific"><li>$250</li></ul></li>
+              <li>Exámenes de Orina:
+                <ul class="side-list-specific">
+                  <li>7 Drogas<ul class="side-list-specific"><li>$15</li></ul></li>
+                  <li>EtG<ul class="side-list-specific"><li>$20</li></ul></li>
+                  <li>EtG y 7 Drogas<ul class="side-list-specific"><li>$25</li></ul></li>
+                </ul>
+              </li>
+              <li>Exámenes de Aliento Semanal <ul class="side-list-specific"><li>$6</li></ul></li>
+            </ul>
+            <p>Precios adecuados a la necesidad para quienes sean elegibles</p>
+        </div>
+        
+        <div id="clinic-side" class="hidden" value="#Clinical-Services">
+          <p class="">Services Price:</p>
+            <ul>
+              <li>Intake for Adults<ul class="side-list-specific"><li>$35</li></ul></li>
+              <li>Intake for Youth (Under 18)<ul class="side-list-specific"><li>$20</li></ul></li>
+              <li>AOD Evaluation <ul class="side-list-specific"><li>$150</li></ul></li>
+              <li>Mental Health Assesment<ul class="side-list-specific"><li>$250</li></ul></li>
+              <li>Level I Education<ul class="side-list-specific"><li>$100</li></ul></li>
+              <li>Group Fee Adult<ul class="side-list-specific"><li>$25</li></ul></li>
+              <li>Group Fee Youth<ul class="side-list-specific"><li>$15</li></ul></li>
+              <li>Breathalyzer per week<ul class="side-list-specific"><li>$6</li></ul></li>
+              <li>Urinalysis:
+                <ul class="side-list-specific">
+                  <li>7 Panel per screen<ul class="side-list-specific"><li>$15</li></ul></li>
+                  <li>EtG<ul class="side-list-specific"><li>$20</li></ul></li>
+                  <li>7 Panel and EtG<ul class="side-list-specific"><li>$25</li></ul></li>
+                </ul>
+              </li>
+              <li>Antabuse per month<ul class="side-list-specific"><li>$15</li></ul></li>
+            </ul>
+            <p>Sliding scales available for those who qualify</p>
+        </div>
+      </div>
+  </div>
+  <div class="content-page">
+      <div class="dropdown">
+        <div class="menu-icon hidden dropbtn">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <div id="myDropdown" class="dropdown-content">
+          <a class="side-nav-link" href="#home">Home</a>
+          <a class="side-nav-link" href="#spanish-info">Informacion en espanol</a>
+          <a class="side-nav-link" href="#Servicios-clinicos">Servicios Clinicos</a>
+          <a class="side-nav-link" href="#Clinical-Services">Clinical services</a>
+          <a class="side-nav-link" href="#about">About Us</a>
+          <a class="side-nav-link" href="#translation">Translations</a>
+        </div>
+      </div>
+      
+      <header id="home"><h1>Spanish CLinic LLC</h1></header>
+      <div class="container">
+        <div class="float-container">
+          <div class="map">
+              <h2>Dayton Office</h2>
+                <div class="map-container-edit">
+                    <div style=""><style type="text/css">
+                      #WST27290TzNqxQd5bT .title-bar {
+                      color: #ffffff;
+                      font-size: 17pt;
+                      font-family: Arial;
+                      border-color: #1e5790;
+                      } 
+                      #WST27290TzNqxQd5bT .widget-instance a {
+                      color: #1e5790;
+                      font-size: 11pt;
+                      font-family: Arial;
+                      } 
+                      #WST27290TzNqxQd5bT .text-content {
+                      color: #E0E0E0;
+                      font-size: 11pt;
+                      font-family: Arial;
+                      } 
+                      #WST27290TzNqxQd5bT .contrast { background-color: #E0E0E0; }
+                      #WST27290TzNqxQd5bT .speech-balloon-tail { color: #E0E0E0; }
+                      #WST27290TzNqxQd5bT .contrast > div { background-color: #E0E0E0; }
+                      #WST27290TzNqxQd5bT a.profile span {
+                      color: #E0E0E0;
+                      font-size: 11pt;
+                      font-family: Arial;
+                      } 
+                      #WST27290TzNqxQd5bT .contrast {
+                      color: #000000;
+                      font-size: 11pt;
+                      font-family: Arial;
+                      } 
+                      #WST27290TzNqxQd5bT .wst_album .menu_sm { padding: 5px 15px; }
+                      #WST27290TzNqxQd5bT_waiter{
+                          width: 0;
+                          height: 0px;
+                      }
+                    </style>
+                    <div id="WST27290TzNqxQd5bT-anchor" data-cygnus-wt="mapquest" class="widget-block"><div class="widget-container type-mapquest normal" id="WST27290TzNqxQd5bT" style=""><div class="loading-text" style="position: relative; text-align: center; top: 29px; left: 0px; display: none;">Loading...</div><div class="widget-instance ui-gdMapQuestWST27290TzNqxQd5bT ui-gdMapQuest" id="WST27290TzNqxQd5bT-mapquest-normal" style="top: 0px; left: 0px;"><div id="ui-gdMapQuest-containerWST27290TzNqxQd5bT" class="ui-gdMapQuest-container"><div id="WST27290TzNqxQd5bT_waiter" class="waiter" style="" title="Please wait while map is loading..."></div><div id="WST27290TzNqxQd5bT_interactive_map" style="width: 540px; position: relative;" class="widget-third-party"><div style="width: 540px; height: 450px; z-index: 0; overflow: hidden; background: rgb(255, 255, 255); position: relative; top: 0px; left: 0px; cursor: -webkit-grab;"><div class="mqa-display" style="position: absolute; z-index: 0;"><div class="mqa-zl mqa-zl100 mqa-zlf" style="position: absolute; z-index: 100; cursor: default;"><div style="position: absolute;"><img src="http://content.mqcdn.com/sdk/js/v7.0.1/images/nothing.gif" style="display: none;"><img src="http://content.mqcdn.com/sdk/js/v7.0.1/images/nothing.gif" style="display: none;"><img src="http://content.mqcdn.com/sdk/js/v7.0.1/images/nothing.gif" style="display: none;"><div class="mapControl smallZoom map" style="background-image: url(&quot;http://content.mqcdn.com/sdk/js/v7.0.1/images/sprite_map_controls.png&quot;); z-index: -1; top: 5px; left: 5px; display:none;"><div class="zoomin" title="Zoom In" style="background-image: url(&quot;http://content.mqcdn.com/sdk/js/v7.0.1/images/sprite_map_controls.png&quot;);"></div><div class="zoomout" title="Zoom Out" style="background-image: url(&quot;http://content.mqcdn.com/sdk/js/v7.0.1/images/sprite_map_controls.png&quot;);"></div></div></div><div style="position: absolute; left: 540px;"><div class="mapControl mapTogglesWrapper map"><span class="viewOptionsWrapper"><span class="maptoggle maptoggleLeft mapView mapviewtoggleS"><span style="background-image: url(&quot;http://content.mqcdn.com/sdk/js/v7.0.1/images/sprite_map_controls.png&quot;); z-index: 60;">MAP</span></span><span class="maptoggle maptoggleRight satelliteView" style="z-index: 100; background-image: url(&quot;http://content.mqcdn.com/sdk/js/v7.0.1/images/sprite_map_controls.png&quot;);"><span style="background-image: url(&quot;http://content.mqcdn.com/sdk/js/v7.0.1/images/sprite_map_controls.png&quot;); z-index: 60;">SATELLITE</span></span><span class="belowToggle" style="background-image: url(&quot;http://content.mqcdn.com/sdk/js/v7.0.1/images/sprite_map_controls.png&quot;); display: none;"><span style="background-image: url(&quot;http://content.mqcdn.com/sdk/js/v7.0.1/images/sprite_map_controls.png&quot;); z-index: 60;"><input type="checkbox"><strong>Show Labels</strong></span></span></span></div></div><div style="position: absolute; top: 500px;"></div><div style="position: absolute; left: 540px; top: 500px;"></div></div><div class="mqa-zl mqa-zl0 mqa-zlgl" style="position: absolute; z-index: 0; left: 270px; top: 250px;"><div style="position: absolute; background-image: url(&quot;http://content.mqcdn.com/sdk/js/v7.0.1/images/loading-tile-gears.jpg&quot;); background-repeat: repeat; left: -1294px; top: -1274px; width: 2588px; height: 2548px;"></div></div><div class="mqa-zl mqa-zl10 mqa-zlf" style="position: absolute; z-index: 22;"><img class="questyLogo" src="http://content.mqcdn.com/sdk/js/v7.0.1/images/questy.png" width="100" height="20" style="width: 100px; height: 20px; position: absolute; display: block; z-index: 22; left: 5px; top: 475px;"><div style="position: absolute; display: block; overflow: hidden; z-index: 22; width: 150px; height: 26px; left: 109px; top: 467px;"><div class="scale_bar" style="margin-bottom: 2px; width: 98.1231px;"><div class="scale_text">500ft</div></div><div class="scale_bar" style="margin-bottom: 1px; margin-top: 14px; width: 128.77px;"><div class="scale_text">200m</div></div></div><div style="position: absolute; left: 540px; top: 500px;"><div class="mqacopyright mqacopyrightdark" style="position: absolute; bottom: 0px; right: 5px; text-align: right; z-index: 22;">©2017 MapQuest, © TomTom, <a style="color:white;"  href="http://hello.mapquest.com/attributions-mapbox">©2017 Mapbox</a>  | <a id="terms" class="termsLink" target="_blank" style="color:white;" href="http://hello.mapquest.com/terms-of-use">Terms</a></div></div></div><div class="mqa-zl mqa-zl1000 mqa-zlf" style="position: absolute; z-index: 1000;"><div style="position: absolute; z-index: 1000; left: 0px; top: 0px;"></div></div><div class="mqa-zl mqa-zl1000 mqa-zlgl" style="position: absolute; z-index: 1000; left: 270px; top: 250px;"><div style="position: absolute; z-index: 1000;"></div></div><div class="mqa-zl mqa-zl5 mqa-zlgl" style="position: absolute; z-index: 5; left: 270px; top: 250px;"><div style="position: absolute;"><img unselectable="on" galleryimg="no" src="http://d.tiles.mapbox.com/v4/mapquest.streets/16/13676/24873.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -12px; top: 101px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13676/24872.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -12px; top: -155px;"><img unselectable="on" galleryimg="no" src="http://c.tiles.mapbox.com/v4/mapquest.streets/16/13677/24873.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 244px; top: 101px;"><img unselectable="on" galleryimg="no" src="http://b.tiles.mapbox.com/v4/mapquest.streets/16/13675/24873.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -268px; top: 101px;"><img unselectable="on" galleryimg="no" src="http://b.tiles.mapbox.com/v4/mapquest.streets/16/13677/24872.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 244px; top: -155px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13675/24872.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -268px; top: -155px;"><img unselectable="on" galleryimg="no" src="http://c.tiles.mapbox.com/v4/mapquest.streets/16/13676/24874.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -12px; top: 357px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13676/24871.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -12px; top: -411px;"><img unselectable="on" galleryimg="no" src="http://d.tiles.mapbox.com/v4/mapquest.streets/16/13677/24874.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 244px; top: 357px;"><img unselectable="on" galleryimg="no" src="http://c.tiles.mapbox.com/v4/mapquest.streets/16/13675/24874.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -268px; top: 357px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13677/24871.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 244px; top: -411px;"><img unselectable="on" galleryimg="no" src="http://b.tiles.mapbox.com/v4/mapquest.streets/16/13675/24871.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -268px; top: -411px;"><img unselectable="on" galleryimg="no" src="http://d.tiles.mapbox.com/v4/mapquest.streets/16/13676/24870.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -12px; top: -667px;"><img unselectable="on" galleryimg="no" src="http://c.tiles.mapbox.com/v4/mapquest.streets/16/13678/24873.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 500px; top: 101px;"><img unselectable="on" galleryimg="no" src="http://b.tiles.mapbox.com/v4/mapquest.streets/16/13678/24872.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 500px; top: -155px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13674/24873.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -524px; top: 101px;"><img unselectable="on" galleryimg="no" src="http://b.tiles.mapbox.com/v4/mapquest.streets/16/13674/24872.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -524px; top: -155px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13677/24870.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 244px; top: -667px;"><img unselectable="on" galleryimg="no" src="http://c.tiles.mapbox.com/v4/mapquest.streets/16/13675/24870.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -268px; top: -667px;"><img unselectable="on" galleryimg="no" src="http://b.tiles.mapbox.com/v4/mapquest.streets/16/13678/24874.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 500px; top: 357px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13674/24874.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -524px; top: 357px;"><img unselectable="on" galleryimg="no" src="http://c.tiles.mapbox.com/v4/mapquest.streets/16/13678/24871.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 500px; top: -411px;"><img unselectable="on" galleryimg="no" src="http://c.tiles.mapbox.com/v4/mapquest.streets/16/13674/24871.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -524px; top: -411px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13678/24870.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: 500px; top: -667px;"><img unselectable="on" galleryimg="no" src="http://c.tiles.mapbox.com/v4/mapquest.streets/16/13674/24870.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -524px; top: -667px;"><img unselectable="on" galleryimg="no" src="http://d.tiles.mapbox.com/v4/mapquest.streets/16/13673/24870.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -780px; top: -667px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13673/24873.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -780px; top: 101px;"><img unselectable="on" galleryimg="no" src="http://c.tiles.mapbox.com/v4/mapquest.streets/16/13673/24872.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -780px; top: -155px;"><img unselectable="on" galleryimg="no" src="http://d.tiles.mapbox.com/v4/mapquest.streets/16/13673/24874.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -780px; top: 357px;"><img unselectable="on" galleryimg="no" src="http://a.tiles.mapbox.com/v4/mapquest.streets/16/13673/24871.png?access_token=pk.eyJ1IjoibWFwcXVlc3QiLCJhIjoiY2Q2N2RlMmNhY2NiZTRkMzlmZjJmZDk0NWU0ZGJlNTMifQ.mPRiEubbajc6a5y9ISgydg" style="position: absolute; left: -780px; top: -411px;"></div></div><div class="mqa-zl mqa-zl20 mqa-zlgl" style="position: absolute; z-index: 20; left: 270px; top: 250px;"></div><div class="mqa-zl mqa-zl80 mqa-zlgl" style="position: absolute; z-index: 80; left: 270px; top: 250px;"><img unselectable="on" galleryimg="no" src="https://img1.wsimg.com/widgetfw/widgetservices/v2.0.6a/images/MapQuest/stop.png" width="22" height="28" style="display: block; cursor: pointer; position: absolute; top: -14px; left: -11px;"></div><div class="mqa-zl mqa-zl50 mqa-zlgl" style="position: absolute; z-index: 50; left: 270px; top: 250px;"><img unselectable="on" galleryimg="no" src="http://content.mqcdn.com/sdk/js/v7.0.1/images/poi/shadow.png" width="23" height="7" style="display: block; position: absolute; top: 10px; left: -5px;"></div></div></div></div><div class="widget-third-party view-large-map"><a style="color:white;" href="http://mapq.st/map?icid=mqdist_godaddy&amp;maptype=map&amp;key=Lmjtd|luu22d0tn1%2Cbg%3Do5-lz2nu&amp;q=1400%20Dayton%20St.%20Aurora%2C%20CO%2080010" class="view-large-map" target="_blank">View Larger Map</a></div><div id="WST27290TzNqxQd5bT_text-description" class="text-description"><span></span><br></div></div><div id="ui-gdMapQuest-wait-WST27290TzNqxQd5bT"></div></div></div></div>
+                    <script type="text/javascript" src="http://widget.starfieldtech.com/API.svc/support.js?script=simpledialog"></script>
+                    </div>
+                </div>
+          </div>
+          <div class="locations">
+            <div class="fixed-contact">
+               <h4>Main Office</h4>
+               <p>4200 Morrison Rd</p>
+               <p>Unit 8</p>
+               <p>Denver CO 80219</p>
+               <p>Ph: <a href="tel:1-303-934-3040">303-934-3040</a></p>
+               <p>Fax: 303-934-4188</p>
+               <p>Co Line: <a href="tel:1-303-937-3580">303-937-3580</a></p>
+            </div>
+            <div class="fixed-contact">
+               <h4>Dayton Office</h4>
+               <p>1400 Dayton St</p>
+               <p>Aurora CO 80018</p>
+               <p></p>
+               <p>Ph: <a href="tel:1-720-920-9508">720-920-9508</a></p>
+               <p>Fax: 303-934-4188</p>
+               <p>Co Line: <a href="tel:1-303-937-3580">303-937-3580</a></p>
+            </div>
+            <div class="fixed-contact">
+              <h4>Peoria Office</h4>
+              <p>12445 E 39th Ave</p>
+               <p>Unit 207</p>
+               <p>Denver CO 80239</p>
+               <p>Ph: <a href="tel:1-720-335-6651">720-335-6651</a></p>
+               <p>Fax: 303-934-4188</p>
+               <p>Co Line: <a href="tel:1-303-937-3580">303-937-3580</a></p>
+            </div>
+          </div>
+        </div>
+          <div class="left-container">
+          <p class="home-p">
+              Spanish Clinic foresees that it is important and imminent that culturally appropriate services be in place for a diverse population in need of Clinical Services. We will provide services primarily but not exclusively in the Spanish language. We will be at the service of individual clients and agencies from the community and the criminal justice system.
+          </p>
+          <div class="image">
+              
+          </div>
+          <div class="listy-container">
+            <h2 class="home-h2">We offer:</h2>
+              <ul class="list-specific">
+                     <li>DUI Classes</li> 
+                     <li>Substance Abuse Services for Youth</li>
+                     <li>Aggression Control Classes</li>
+                     <li>Mental Health Services</li>
+                     <li>On-Site UA’s</li>
+              </ul>
+          </div>
+          <div class="listy-container">
+            <h2 class="home-h2">We are:</h2>
+            <ul class="list-specific">
+                     <li>MEDICAID provider for Substance Abuse and Mental Health</li> 
+                     <li>Division of YouthCorrections (DYC) provider</li>
+                     <li>Department of Corrections (DOC) provider</li>
+                     <li>Senate Bill 94 provider for the 1st and 18th Judicial Districts</li>
+                     <li>Denver Department of Human Services provider</li>
+              </ul>
+          </div>
+          <div class="licensed-Spanish-Clinic">
+            <h2 class="home-h2-last">Spanish Clinic Is Division of Behavioral Health licensed For:</h2>
+            <ul class="list-specific last-list-home">
+                       <li>Intensive Outpatient Treatment</li> 
+                       <li>Enhanced Outpatient Treatment</li>
+                       <li>Level I DUI Education</li>
+                       <li>Level II DUI Education & Therapy</li>
+                       <li>Offender Education & Treatment</li>
+                       <li>Services to Child Welfare Clients</li>
+                       <li>Treatment Program Specific to Minors</li>
+                       <li>Treatment Program Specific to Women</li>
+            </ul>
+          </div>
+          <h2 class="spreader" id="spanish-info">Informacion en Espanol</h2>
+          <p class="about-p">
+              Clínica Español reconoce que es inminente que servicios culturalmente apropiados se ofrezcan  a una población diversa en necesidad de Servicios Clínicos. Ofreceremos servicios de ABUSO DE SUBSTANCIAS y de SALUD MENTAL especialmente pero no exclusivamente en español
+          </p>
+          <div class="listy-container">
+            <h2 class="home-h2">Nosotros ofrecemos:</h2>
+              <ul class="list-specific">
+                     <li>Clases de DUI</li> 
+                     <li>Sevicios de Abusos de Substancias para Jóvenes</li>
+                     <li>Clase de Control de Enojo</li>
+                     <li>Servicios de Salud Mental</li>
+                     <li>Exámenes para detectar alcohol o drogas</li>
+              </ul>
+          </div>
+          <div class="listy-container">
+            <h2 class="home-h2">Nosotrso Somos:</h2>
+            <ul class="list-specific">
+                     <li>Proveedores De Medicaid En Abuso De Substancias Y Salud Mental</li> 
+                     <li>Proveedor De Servicios Para La Correccional De Menores (DYC)</li>
+                     <li>Proveedor De Servicios Para La Correccional De Adultos (DOC)</li>
+                     <li>Proveedor De Servicios Para Cuenta Del Senado 94 de Los Condados 1 Y 18</li>
+                     <li>Proveedor De Servicios Para El Departamento De Servicios Sociales De La Ciudad Y Condado De Denver</li>
+              </ul>
+          </div>
+          <div class="licensed-Spanish-Clinic">
+            <h2 class="home-h2-last">Spanish Clinic está aprobada por el Departamento de Salud del Comportamiento en las siguientes áreas:</h2>
+            <ul class="list-specific last-list-home">
+                       <li>Tratamiento intensivo Externo</li> 
+                       <li>Tratamiento semi-intensivo Externo</li>
+                       <li>Tratamiento Exteno en General</li>
+                       <li>Nivel I de Educación</li>
+                       <li>Nivel II de Educación y Terapia</li>
+                       <li>Educación y Terapia para ofensores</li>
+                       <li>Sevicios a Clientes del Departamento de Sevicios Sociales</li>
+                       <li>Programa de Tratamiento específico para Menores</li>
+                       <li>Programa de Tratamiento específico para Mujeres</li>
+            </ul>
+          </div>
+          <h2 class="spreader" id="Servicios-clinicos">Servicios Clinicos</h2>
+          <p class="about-p">Spanish Clinic ofrece servicios de terapia que están basados en la teoria Cognitiva del Comportamiento, puesto que esta teoria ayuda a los clientes a re-estructurar sus patrones de pensamiento y por tanto sus comportamientos. Nustos programas estan enfocados en el desarrollo de habilidades para que los clientes las puedan desarrollar en las situacioens de su vida.</p>
+          <p class="about-p">Spanish Clinic serves ofrece servicios en áreas en las que creemos que hay necesidad de servicios bilingues y bi-culturales. Nosotros creemos que uno de los aspectos esenciales en el proceso de cambio esta basad en entender su cultura y sus ambientes culturales. Esta institución quiere ofrecer educación y terapia sobre alcohol, drogas y salud mental en un ambiente culturalmente apropiado para los clientes. Nosotros ofrecemos programas en el área de adicciones y salud mental a la población en general, esecialmente a menores y mujeres.  </p>
+          <div class="listy-container">
+            <h2 class="home-h2">Programas de Adultos:</h2>
+            <ul class="list-specific">
+              <li>Nivel I de Educación para DWAI/DUI</li>
+              <li>Nivel II de Educación y Terapia para DWAI/DUI</li>
+              <li>Terapias de Alcohol y Drogas</li>
+              <li>Progama de Prevención para Recaídas<ul class="list-specific"><li>Programa de 12 semanas</li></ul></li>
+              <li>Programa Especifico de Mariguana<ul class="list-specific"><li>Programa de 12 semanas</li></ul></li>
+              <li>Programa Especifico de Estimulantes<ul class="list-specific"><li>Programa de 12 semanas</li></ul></li>
+              <li>Clases de Padres<ul class="list-specific"><li>Programa de 6 semanas Utilizamos el material de Padres Activos de Hoy</li></ul></li>
+              <li>Clases de Manejo de Enojo<ul class="list-specific"><li>Programa de 12 semanas</li></ul></li>
+              <li>Programa de Impacto a Victimas<ul class="list-specific"><li>Programa de 6 semanas</li></ul></li>
+            </ul>
+          </div>
+          <div class="listy-container">
+            <h2 class="home-h2">Programas de Jóvenes:</h2>
+            <ul class="list-specific">
+              <li>Terapias de Grupo sobre Abuso de Substancias<ul class="list-specific"><li>Programa de 6 a 12 semanas</li></ul></li>
+              <li>Programa Específico de Marihuana<ul class="list-specific"><li>Programa de 6 a 12 semanas</li></ul></li>
+              <li>Programa Específico de Estimulantes<ul class="list-specific"><li>Programa de 6 a 12 semanas</li></ul></li>
+              <li>Programa para Prevenir Recaer<ul class="list-specific"><li>Programa de 6 a 12 semanas</li></ul></li>
+              <li>Programa de Manejo de Enojo<ul class="list-specific"><li>Programa de 12 semanas</li></ul></li>
+              <li>Programa de Ausentismo Escolar<ul class="list-specific"><li>Programa de 6 semanas</li></ul></li>
+              <li>Programa de Robo Menor<ul class="list-specific"><li>Programa de 3 sesiones</li></ul></li>
+              <li>Jovenes de Regreso a la Sociedad<ul class="list-specific"><li>Programa de 12 semanas</li></ul></li>
+              <li>Clases de Padres para Jóvenes y Adolescentes<ul class="list-specific"><li>Programa de 6 semanas Utilizamos el material del programa de ARAISE</li></ul></li>
+            </ul>
+          </div>
+          <div class="listy-container">
+            <h2 class="home-h2">Otros Servicios Clínicos:</h2>
+            <ul class="list-specific">
+              <li>Evaluaciones<ul class="list-specific"><li>Abuso de substancias y Salud Mental</li></ul></li>
+              <li>Terapia Individual y de Familia<ul class="list-specific"><li>En ingles y en español</li></ul></li>
+              <li>Monitoreo de Sobriedad<ul class="list-specific"><li>Exámenes de Orina, de Aliento, Monitoreo de ingestión de (Antabuse)</li></ul></li>
+            </ul>
+          </div>
+          
+          
+          <h2 class="spreader" id="Clinical-Services">Clinical Services</h2>
+          <p class="about-p">Spanish Clinic offers treatment that is Cognitive-Behavioral based; as this helps clients restructure their thought patterns and therefore their behavior.  Our treatment is also focused on skills building, so the theory can be applied to each individual’s life situation.</p>
+          <p class="about-p">Spanish Clinic serves in an area that is thought to be in need of bilingual and bicultural services. It is the belief of Spanish Clinic that one of the main venues for change derives from understanding an individual's culture and cultural environment.  This agency wants to deliver education and treatment regarding drugs and alcohol in a culturally appropriate environment for all clients. Spanish Clinic offers programs in the areas of addictions and mental health to the general population and to women and minors.  </p>
+          <div class="listy-container">
+            <h2 class="home-h2">Adult Programs:</h2>
+            <ul class="list-specific">
+              <li>DWAI/DUI Education – Level I</li>
+              <li>DWAI/DUI Level II Education and Therapy</li>
+              <li>Alcohol & Drug Treatment</li>
+              <li>Recovery Planning /Relapse Prevention for Adults<ul class="list-specific"><li>12 week program</li></ul></li>
+              <li>Marijuana Specific<ul class="list-specific"><li>12 week program</li></ul></li>
+              <li>Stimulants  Specific<ul class="list-specific"><li>12 week program</li></ul></li>
+              <li>Parenting Classes<ul class="list-specific"><li>6 week program Active Parenting Curriculum</li></ul></li>
+              <li>Anger Management<ul class="list-specific"><li>12 week program</li></ul></li>
+              <li>Victim Impact Program<ul class="list-specific"><li>6 week program</li></ul></li>
+            </ul>
+          </div>
+          <div class="listy-container">
+            <h2 class="home-h2">Youth Programs:</h2>
+            <ul class="list-specific">
+              <li>Substance Abuse Treatment<ul class="list-specific"><li>6 - 12 week program</li></ul></li>
+              <li>Marijuana Specific<ul class="list-specific"><li>6 - 12 week program</li></ul></li>
+              <li>Stimulants Specific<ul class="list-specific"><li>6 - 12 week program</li></ul></li>
+              <li>Recovery Planning /Relapse Prevention<ul class="list-specific"><li>6 - 12 week program</li></ul></li>
+              <li>Aggression Control<ul class="list-specific"><li>12 week program</li></ul></li>
+              <li>Truancy Program<ul class="list-specific"><li>6 week program</li></ul></li>
+              <li>Petty Theft Program<ul class="list-specific"><li>3 week program</li></ul></li>
+              <li>Youth Fitting Into Society<ul class="list-specific"><li>12 week program</li></ul></li>
+              <li>Teen Parenting Class<ul class="list-specific"><li>6 week program Curriculum and workbooks from ARAISE</li></ul></li>
+            </ul>
+          </div>
+          <div class="listy-container">
+            <h2 class="home-h2">Other Clinical Services:</h2>
+            <ul class="list-specific">
+              <li>Evaluations<ul class="list-specific"><li>Substance Abuse, Anger Issues and Mental Health Assessment</li></ul></li>
+              <li>Individual and Family therapy<ul class="list-specific"><li>In English and Spanish</li></ul></li>
+              <li>Monitored Sobriety on site<ul class="list-specific"><li>Urinalysis Breathalyzer Disulfiram (Antabuse)</li></ul></li>
+            </ul>
+          </div>
+          
+          
+          <h2 class="spreader" id="about">About Us</h2>
+          <p class="about-p">We are committed to providing you with quality, personalized substance abuse and mental health services. We believe that our combined knowledge and experience will achieve remarkable results for our clients. We are dedicated to high standards of excellence and professionalism.</p>
+          <div class="about-container">
+          <div class="listy-container">
+            <h2 id="about">CEO/Director: </h2>
+            <p class="ceo-name">Alfonso Castillo BA, CAC III</p>
+            <ul class="ceo-info">
+              <li>Email: acastillo@spanish-clinic.com </li>
+            </ul>
+          </div>
+          <div class="listy-container">
+            <h2>Education</h2>
+          <ul class="ceo-info">
+              <li>Universidad Del Valle De Atemajac</li>
+                  <ul class="list-specific">
+                     <li>Licentiate on Philosophy</li> 
+                     <li>Guadalajara Jal. Mexico 1996-2000</li>
+                  </ul>
+               <li>Universidad Pontificia De Mexico</li>
+                   <ul class="list-specific">
+                     <li>Bachelor degree in Theology </li> 
+                     <li>Mexico D.F. Mexico 1993-1996</li>
+                  </ul>
+                <li>St Joseph Seminary</li>
+                <ul class="list-specific">
+                     <li>Bachelor degree in Philosophy</li> 
+                     <li>Guadalajara Jal. Mexico 1990 -1992</li>
+                </ul>
+          </ul>
+          </div>
+          <div class="listy-container">
+            <h2>Experience</h2>
+            <ul class="ceo-info">
+                <li>Ceo of Spanish Clinic LLC</li>
+                <ul class="list-specific"><li>March 2008 – Present</li></ul>
+                <li>Bilingual Service Coordinator</li>
+                <ul class="list-specific"><li>February 2006 – August 2008</li></ul>
+                <li>Denver Options Inc.</li>
+                <ul class="list-specific"><li>November 2004 – February 2006</li></ul>
+                <li>Bilingual Senior Case Manager Family Tree, Inc.</li>
+                <ul class="list-specific"><li>March 2002 – October 2004</li></ul>
+                <li>Alcohol and Drug Counselor Servicios de La Raza Inc</li>
+            </ul>
+          </div>
+          </div>
+          
+          <div class="about-container">
+            <div class="listy-container">
+              <h2 id="about">Clinical Director: </h2>
+              <p class="ceo-name">Claudia Valadez, MA, LPC, LAC</p>
+              <ul class="ceo-info">
+                <li>Email: cvaladez@spanish-clinic.com </li>
+              </ul>
+            </div>
+            <div class="listy-container">
+            <h2>Education</h2>
+            <ul class="ceo-info">
+                <li>Baylor University</li>
+                    <ul class="list-specific">
+                       <li>Bachelor of Arts, Major in Psychology, Minor in Spanish</li> 
+                       <li>2001</li>
+                    </ul>
+                 <li>University Of Denver</li>
+                     <ul class="list-specific">
+                       <li>Master of Arts in Forensic Psychology</li> 
+                       <li>2003</li>
+                    </ul>
+            </ul>
+            </div>
+            <div class="listy-container">
+            <h2>Experience</h2>
+            <ul class="ceo-info">
+                <li>Ceo of Spanish Clinic LLC</li>
+                <ul class="list-specific"><li>March 2008 – Present</li></ul>
+                <li>Clinical Director</li>
+                <ul class="list-specific"><li>June 2005 – June 2009</li></ul>
+                <li>Adult Services Counselor 17th Judicial District Diversion Program</li>
+                <ul class="list-specific"><li>August 2003 – October 2005 </li></ul>
+                <li>Bilingual Clinician deas Directed @ (IDEA)</li>
+                <ul class="list-specific"><li>Fall 2002 – Spring 2003</li></ul>
+                <li>Field Placement- University of Denver Ethnic Counseling Community Outreach Services</li>
+                <ul class="list-specific"><li>Fall 2001 – Spring 2003</li></ul>
+                <li>Clinic Assistant–Professional Psychology Center University of Denver</li>
+                <ul class="list-specific"><li>Fall 2001 – Summer 2002</li></ul>
+                <li>Field Placement- University of Denver 18th Judicial District Probation Department</li>
+                <ul class="list-specific"><li>Fall 2000 Public Service Internship</li></ul>
+                <li>McLennan County Probation Office</li>
+            </ul>
+          </div>
+          </div>
+          
+          
+          
+          
+          
+          <h2 class="spreader" id="translation">Translations</h2>
+          <p class="about-p">Spanish Clinic will develop a bridge between two languages: English and Spanish. We are highly competitive on Translations from English to Spanish not only because of our native language or because of our strong educational background, but because we are bicultural. In order to provide an estimate we consider the following aspects:</p>
+          <p class="about-p">Contents: General information not published. Published information. Technical information such as Legal or Medical.</p>
+          <p class="about-p">Length: Less than 300 words. Between 300 to 1000 words More than 1000 words. For documents over 5000 words, please contact our office for an estimate. Note:  The charge per word applies to the number of words in the document to be translated.</p>
+          <p class="about-p">Design: Plain document Designed document.</p>
+          <p class="about-p">Time: Regular or Expedited</p> 
+          <p class="about-p">The design is a factor difficult to evaluate and will be evaluated on case by case documents. The following table provides an estimate for documents without special design and in a regular time providing a NEW SPECIAL RATE:</p>
+          <table>
+            <tr>
+              <td>Content</td>
+              <td>Length</td>
+              <td>Regular Time</td>
+              <td>New Rate</td>
+            </tr>
+            <tr>
+              <td rowspan="3"><p>General information not published</p></td>
+              <td>Less than 300 words</td>
+              <td>3 business days</td>
+              <td>25 cents per word</td>
+            </tr>
+            <tr>
+              <td>Between 300 to 1000 words</td>
+              <td>7 business days</td>
+              <td>23 cents per word</td>
+            </tr>
+            <tr>
+              <td>More than 1000 words but less than 5,000 words</td>
+              <td>15 business days</td>
+              <td>21 cents per word</td>
+            </tr>
+            <tr>
+              <td rowspan="3"><p>Published information</p></td>
+              <td>Less than 300 words</td>
+              <td>3 business days</td>
+              <td>28 cents per word</td>
+            </tr>
+            <tr>
+              <td>Between 300 to 1000 words</td>
+              <td>9 business days</td>
+              <td>25 cents per word</td>
+            </tr>
+            <tr>
+              <td>More than 1000 words but less than 5,000 words</td>
+              <td>18 business days</td>
+              <td>23 cents per word</td>
+            </tr>
+            <tr>
+              <td rowspan="3"><p>Technical information such as Legal or Medical</p></td>
+              <td>Less than 300 words</td>
+              <td>5 business days</td>
+              <td>30 cents per word</td>
+            </tr>
+            <tr>
+              <td>Between 300 to 1000 words</td>
+              <td>12 business days</td>
+              <td>28 cents per word</td>
+            </tr>
+            <tr>
+              <td>More than 1000 words but less than 5,000 words</td>
+              <td>20 business days</td>
+              <td>25 cents per word</td>
+            </tr>
+          </table>
+          
+          </div>
+        
+      </div>
+      <footer>&copy;2018 Spanish Clinic LLC. All rights reserved</footer>
+  </div>
 </body>
 </html>
